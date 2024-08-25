@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #btn{
+        border: 4px inset rgb(101, 101, 201);
+        background-color: rgb(30, 30, 46) ;
+        color: rgb(245, 237, 237);
+        font-size: larger;
+        font-family: Arial, Helvetica, sans-serif;
+        border-radius: 7px;
+        height: 50px;
+        width: 200px;
+        margin-top: 350px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">change color</button>
+
+    <script>
+      const array=['#CCFF99','#CCCCFF','#CC99FF','#FF0066','#99FF33','#003300','#C70039'];
+    var colour=document.getElementById("btn");
+ 
+    document.addEventListener("click",function(){
+        let randomcolor=Math.floor(Math.random()*array.length);
+
+        let rand=array[randomcolor];
+        document.body.style.backgroundColor=rand;
+    })
+    </script>
+</body> 
+</html>
